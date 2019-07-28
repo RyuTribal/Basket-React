@@ -28,7 +28,7 @@ class Main extends Component {
                     timeout={{ enter: 750, exit: 150 }}
                   >
                     <Switch location={location}>
-                      <Route exact path="/" component={Home} />
+                      <Route exact path="/" component={Home}  />
                       <Route path="/forum" component={Forum} />
                       <Route path="/account" component={Account} />
                       <Route component={Error404} />

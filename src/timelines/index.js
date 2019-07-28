@@ -1,4 +1,5 @@
 import { TimelineMax as Timeline, Power1 } from 'gsap';
+import { loadAll } from "../js/home.js";
 
 const getDefaultTimeline = (node, delay) => {
   const timeline = new Timeline({ paused: true });
@@ -28,11 +29,11 @@ export const play = (pathname, node, appears) => {
   const delay = appears ? 0 : 0.5;
   let timeline
 
-  if (pathname === '/')
+  if (pathname === '/'){
     timeline = getHomeTimeline(node, delay);
-  else
+  }else{
     timeline = getDefaultTimeline(node, delay);
-
+  }
   requestAnimationFrame(() => timeline.play())
 }
 

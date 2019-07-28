@@ -63,6 +63,7 @@ nav {
   box-shadow: 0px 0px 1px #999;
   background-color: white;
   text-align: center;
+  z-index: 3;
 }
 
 @media screen and (max-width: 768px) {
@@ -146,7 +147,7 @@ nav a.active:before {
 }
 
 .app {
-  padding: 2em;
+  padding: 3em 0em 2em !important;
   text-align: center;
 }
 
@@ -186,3 +187,4 @@ nav a.active:before {
   font-style: italic;
   margin: 0;
 }
+
