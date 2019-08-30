@@ -13,6 +13,12 @@ class Main extends Component {
   render() {
     return (
       <BrowserRouter>
+        <div className="loader">
+          <div className="loading-text">
+            <div className="lds-dual-ring"></div>
+            <h1 className="loading">Loading...</h1>
+          </div>
+        </div>
         <div className="app">
           <Route
             render={({ location }) => {
@@ -28,7 +34,7 @@ class Main extends Component {
                     timeout={{ enter: 750, exit: 150 }}
                   >
                     <Switch location={location}>
-                      <Route exact path="/" component={Home}  />
+                      <Route exact path="/" component={Home} />
                       <Route path="/forum" component={Forum} />
                       <Route path="/account" component={Account} />
                       <Route component={Error404} />

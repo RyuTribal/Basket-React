@@ -1,9 +1,20 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
   line-height: 1.75;
   margin: 0;
   padding: 0;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -149,6 +160,8 @@ nav a.active:before {
 .app {
   padding: 3em 0em 2em !important;
   text-align: center;
+  height: 100%;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -186,5 +199,100 @@ nav a.active:before {
   font-weight: 700;
   font-style: italic;
   margin: 0;
+}
+
+.grid-container{
+  max-width: 600px;
+  margin: 0 auto;
+  height: 100% !important;
+  margin-bottom: 80px;
+}
+
+.row{
+  min-width: 100%;
+  position: relative !important;
+  margin: 0 !important;
+  height: fit-content !important;
+}
+
+.img-container{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.group-thumb{
+  height: auto;
+  width: 100%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 5%;
+}
+
+.level-two{
+  margin-top: 30px;
+}
+
+.level-two .group-thumb{
+  max-height: 170px;
+}
+
+.title-container{
+  position: absolute;
+  font-size: 32px;
+  color: white;
+  padding: 10px;
+  margin: 0;
+
+}
+
+.group-title{
+  margin: 0;
+  
+}
+
+section{
+  width: 100%;
+  background-color: white;
+}
+
+
+/*Loading basketball*/
+
+.loader{
+  height: 100% !important;
+  position: fixed;
+  width: 100% !important;
+  z-index: 100;
+  background-color: #ff5252;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  display: none;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
