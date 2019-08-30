@@ -74,10 +74,12 @@ export const loadAll = () => {
               counter++;
             }
           },
-          error: function() {}
+          error: function() {},
+          complete: function(){
+            $('.loader').css("display", "none")
+          }
         });
       }
-      $('.loader').css("display", "none")
     },
     error: function() {}
   });
